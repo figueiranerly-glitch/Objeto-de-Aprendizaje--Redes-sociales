@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Objeto de Aprendizaje: Redes Sociales</title>
+  <style>
+    body {
+      background-color: #B3E5FC;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      background-color: #F8BBD0;
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 28px;
+    }
+
+    h2, h3 {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    p, ul {
+      max-width: 700px;
+      margin: 0 auto 20px;
+      line-height: 1.6;
+    }
+
+    hr {
+      margin: 40px 0;
+      border: none;
+      border-top: 2px dashed #90CAF9;
+    }
+
+    textarea {
+      display: block;
+      width: 90%;
+      max-width: 700px;
+      margin: 10px auto 30px;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      resize: vertical;
+    }
+
+    a {
+      color: #004d80;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    button {
+      display: block;
+      margin: 10px auto 30px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #FFCDD2;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #F48FB1;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Redes Sociales</h1>
+ <h1>"Entre Likes y Riesgos”</h1>
+
+  <h2> Propósito</h2>
+  <p>Que los estudiantes identifiquen y reflexionen sobre los riesgos asociados al uso de redes sociales, desarrollando criterios para un uso responsable, ético y seguro.</p>
+
+  <hr>
+
+  <h2> Competencias a desarrollar</h2>
+  <ul>
+    <li>Pensamiento crítico y ético digital</li>
+    <li>Comunicación responsable en entornos virtuales</li>
+    <li>Autoconocimiento y gestión emocional</li>
+    <li>Capacidad de análisis de contenidos digitales</li>
+  </ul>
+
+  <hr>
+
+  <h2> Estructura del Objeto</h2>
+  <h3>1. Narrativa central</h3>
+  <p>A través de la historia de “Luna”, una adolescente que navega por distintas redes sociales, los estudiantes acompañan sus decisiones y enfrentan dilemas reales: exposición excesiva, ciberacoso, adicción digital, desinformación, etc.</p>
+
+  <p><strong>📄 Leer la historia completa:</strong> 
+  <a href="La historia de Luna.odt" target="_blank">Descargar archivo .odt</a></p>
+
+  <hr>
+
+  <h2> Contenidos clave</h2>
+  <ul>
+    <li>Tipos de riesgos: psicológicos, sociales, informativos y legales</li>
+    <li>Ciberbullying y grooming</li>
+    <li>Huella digital y reputación online</li>
+    <li>Adicción a la validación (likes, seguidores)</li>
+    <li>Desinformación y fake news</li>
+    <li>Privacidad y configuración de seguridad</li>
+    <li>Influencia en la autoestima y relaciones personales</li>
+  </ul>
+
+  <hr>
+
+  <h2> Actividades sugeridas</h2>
+
+  <h3> 1. “Decisiones de Luna” (roleplay interactivo)</h3>
+  <p>Situaciones simuladas donde los estudiantes eligen cómo actuaría Luna y analizan las consecuencias.</p>
+  <p><strong>✍ Escribí tu reflexión:</strong></p>
+  <textarea rows="5" placeholder="¿Qué decisión tomarías si fueras Luna? ¿Por qué?"></textarea>
+
+  <h3> 2. Análisis de casos reales</h3>
+  <p>Estudio de noticias o testimonios sobre riesgos en redes, con debate grupal.</p>
+
+  <h3> 3. Campaña de concientización</h3>
+  <p>Creación de afiches, reels o podcasts sobre el uso seguro de redes.</p>
+
+  <h3> 4. “Mi huella digital”</h3>
+  <p>Reflexión guiada sobre la identidad digital y la información que comparten.</p>
+  <p><strong>✍ Escribí tu reflexión:</strong></p>
+  <textarea rows="5" placeholder="¿Qué compartís en redes? ¿Cómo te gustaría que te vean en línea?"></textarea>
+
+  <h3> 5. Taller técnico</h3>
+  <p>Configuración de privacidad, revisión de permisos y creación de contraseñas seguras.</p>
+
+  <hr>
+
+  <h2> Actividad interactiva con bucles en JavaScript</h2>
+
+  <h3>Simulador de Likes</h3>
+  <p>¿Cuántos likes recibió Luna en su última publicación?</p>
+  <button onclick="simularLikes()">Ver likes</button>
+
+  <h3> Scroll infinito</h3>
+  <p>Simulá el comportamiento de una red social que nunca deja de mostrar contenido.</p>
+  <button onclick="scrollInfinito()">Activar scroll</button>
+
+  <h3> Desafío de Bucles: “Rescate de Luna”</h3>
+  <p>Ayudá a Luna a recuperar sus publicaciones perdidas usando un bucle.</p>
+  <button onclick="rescateDeLuna()">Iniciar misión</button>
+
+  <script>
+    function simularLikes() {
+      let cantidad = prompt("Ingresá la cantidad de likes:");
+      cantidad = parseInt(cantidad);
+      for (let i = 1; i <= cantidad; i++) {
+        alert("Like #" + i + " recibido 💖");
+      }
+      alert("¡Luna se siente abrumada por tanta validación!");
+    }
+
+    function scrollInfinito() {
+      let seguir = "sí";
+      let contador = 1;
+      while (seguir.toLowerCase() === "sí") {
+        alert("Publicación #" + contador);
+        contador++;
+        seguir = prompt("¿Querés seguir scrolleando? (sí/no)");
+      }
+      alert("¡Hora de desconectarse! 🌙");
+    }
+
+    function rescateDeLuna() {
+      let publicaciones = prompt("¿Cuántas publicaciones querés recuperar?");
+      publicaciones = parseInt(publicaciones);
+      for (let i = 1; i <= publicaciones; i++) {
+        alert("Recuperando publicación #" + i + " 📄");
+      }
+      alert("¡Misión cumplida! Luna recuperó su contenido.");
+    }
+  </script>
+
+  <hr>
+
+  <h2>🎵 Recursos complementarios</h2
+  <ul>
+  <li>Fragmentos de <a href="https://www.netflix.com/title/81254224" target="_blank">“El dilema de las redes sociales”</a> (Netflix)</li>
+    <li>Canciones como <a href="https://www.youtube.com/watch?v=ypXsFliAfIM" target="_blank"> “Desconectados” – Neutboom IA (subtitulada en español)</a>> </li>
+  </ul>
+
+<hr>
+
+<footer style="text-align: center; font-size: 16px; color: #555; margin-top: 40px;">
+  <p><strong>Trabajo realizado por Nerly Figueira</strong></p>
+  <p style="font-size: 14px;">Cerro Largo, Uruguay – Agosto 2025</p>
+</footer>
+</body>
+</html>
